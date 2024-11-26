@@ -51,8 +51,6 @@ Endpoint	Method	Description
 Known Issues
 Passwords are not hashed when Spring Security is removed (development mode).
 Basic CORS configuration needed for external clients (e.g., React/Angular).
+
 Contributors
-Your Name - Developer
-Other Contributors - Specify team members.
-License
-This project is licensed under the MIT License. See LICENSE file for details.
+Your Name - Asif Azam (asifazam008)
