@@ -47,44 +47,7 @@ Endpoint	Method	Description
 /api/users/register	POST	Register a new user
 /api/users/login	POST	Login with email and password
 /api/users/all	GET	Get a list of all registered users
-Swagger Documentation
-Visit:
 
-bash
-Copy code
-http://localhost:8080/swagger-ui/index.html
-Sample cURL Commands
-Register a User
-bash
-Copy code
-curl -X POST "http://localhost:8080/api/users/register" \
--H "Content-Type: application/json" \
--d '{
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "password": "securepassword",
-  "role": "TENANT"
-}'
-Login
-bash
-Copy code
-curl -X POST "http://localhost:8080/api/users/login" \
--H "Content-Type: application/json" \
--d '{
-  "email": "johndoe@example.com",
-  "password": "securepassword"
-}'
-Database Schema
-users Table
-Column	Type	Description
-id	BIGINT	Primary key
-name	VARCHAR	Name of the user
-email	VARCHAR	Email address
-password	VARCHAR	Hashed password
-role	ENUM	User role (ADMIN or TENANT)
-roomNumber	VARCHAR	Assigned room number
-bedNumber	VARCHAR	Assigned bed number
-status	VARCHAR	Registration status (PENDING, etc.)
 Known Issues
 Passwords are not hashed when Spring Security is removed (development mode).
 Basic CORS configuration needed for external clients (e.g., React/Angular).
